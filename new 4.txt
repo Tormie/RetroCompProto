@@ -1,0 +1,63 @@
+//initial var set
+
+var rightfree = 0;
+var leftfree = 0;
+var upfree = 0;
+var downfree = 0;
+
+//Check if directions are free.
+
+if (!place_meeting(x + MaxSpeed, y, Obj_Wall_V)) rightfree = 1;
+if (!place_meeting(x - MaxSpeed, y, Obj_Wall_V)) leftfree = 1;
+if (!place_meeting(x, y - MaxSpeed, Obj_Wall_V)) upfree = 1;
+if (!place_meeting(x, y + MaxSpeed, Obj_Wall_V)) downfree = 1;
+
+//If one (or more) direction is free and it's not current, choose between current and potential. -- THIS MUST HAPPEN ONCE, not after one another.
+
+switch (current_movement)
+{
+	case 1:
+		if (leftfree && upfree && downfree) desired_movement = choose(1,2,3,4);
+		
+		if (leftfree && upfree && !downfree) desired_movement = choose(1,3,4);
+		if (leftfree && !upfree && downfree) desired_movement = choose(1,2,3);
+		if (!leftfree && upfree && downfree) desired_movement = choose(1,2,4);
+		
+		if (leftfree && !upfree && !downfree) desired_movement = choose(1,3);
+		if (!leftfree && upfree && !downfree) desired_movement = choose(1,4);
+		if (!leftfree && !upfree && downfree) desired_movement = choose(1,2);
+		break;
+	case 2:
+		if (rightfree && leftfree && upfree) desired_movement = choose (1,2,3,4);
+		
+		if (rightfree && leftfree && !upfree) desired_movement = choose (1,2,3);
+		if (rightfree && !leftfree && upfree) desired_movement = choose (1,2,4);
+		if (!rightfree && leftfree && upfree) desired_movement = choose (2,3,4);
+		
+		if (rightfree && !leftfree && !upfree) desired_movement = choose (1,2);
+		if (!rightfree && leftfree && !upfree) desired_movement = choose (2,3);
+		if (!rightfree && !leftfree && upfree) desired_movement = choose (2,4);
+		break;
+	case 3:
+		if (rightfree && downfree && upfree) desired_movement = choose (1,2,3,4);
+		
+		if (rightfree && downfree && !upfree) desired_movement = choose (1,2,3);
+		if (rightfree && !downfree && upfree) desired_movement = choose (1,3,4);
+		if (!rightfree && downfree && upfree) desired_movement = choose (2,3,4);
+		
+		if (rightfree && !downfree && !upfree) desired_movement = choose (1,3);
+		if (!rightfree && downfree && !upfree) desired_movement = choose (2,3);
+		if (!rightfree && !downfree && upfree) desired_movement = choose (3,4);
+		break;
+	case 4:
+		if (rightfree && downfree && leftfree) desired_movement = choose (1,2,3,4);
+		
+		if (rightfree && downfree && !leftfree) desired_movement = choose (1,2,4);
+		if (rightfree && !downfree && leftfree) desired_movement = choose (1,3,4);
+		if (!rightfree && downfree && leftfree) desired_movement = choose (2,3,4);
+		
+		if (rightfree && !downfree && !leftfree) desired_movement = choose (1,4);
+		if (!rightfree && downfree && !leftfree) desired_movement = choose (2,4);
+		if (!rightfree && !downfree && leftfree) desired_movement = choose (3,4);
+		break;		
+}

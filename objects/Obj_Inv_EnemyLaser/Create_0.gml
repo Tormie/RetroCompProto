@@ -1,0 +1,1 @@
+damagecounter = 2;

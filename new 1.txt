@@ -1,0 +1,103 @@
+set initial direction in create event.
+
+check for input and change desired_movement accordingly.
+
+Using switch statement? 0 = no movement, 1 is right, 2 is down, 3 is left, 4 is up.
+
+Keep moving in that direction until either obstacle hit, or movement input and free path
+
+set desired movement based on input keys.
+
+compare current movement to desired input. If equal, keep moving.
+If not, check direction to see if path empty, if not, keep moving. If it is, change direction.
+
+//set desired_movement based on input.
+if (keyboard_check(vk_right))
+{
+	desired_movement = 1;
+}
+if (keyboard_check(vk_down))
+{
+	desired_movement = 2;
+}
+if (keyboard_check(vk_left))
+{
+	desired_movement = 3;
+}
+if (keyboard_check(vk_up))
+{
+	desired_movement = 4;
+}
+
+if (desired_movement != current_movement)
+{
+	switch(desired_movement)
+	{
+		case 1:
+			if (!place_meeting(x + MaxSpeed, y, Obj_Wall_V))
+			{
+				current_movement = desired_movement;
+			}
+			break;
+		case 2:
+			if (!place_meeting(x, y + MaxSpeed, Obj_Wall_H))
+			{
+				current_movement = desired_movement;
+			}
+			break;			
+		case 3:
+			if (!place_meeting(x - MaxSpeed, y, Obj_Wall_V))
+			{
+				current_movement = desired_movement;
+			}
+			break;			
+		case 4:
+			if (!place_meeting(x, y - MaxSpeed, Obj_Wall_H))
+			{
+				current_movement = desired_movement;
+			}
+			break;
+	}
+}	
+//move in direction of current_movement
+
+switch(current_movement)
+{
+	case 0:
+		hspd = 0;
+		vspd = 0;
+		break;
+	case 1:
+		hspd = MaxSpeed;
+		vspd = 0;
+		break;
+	case 2:
+		hspd = 0;
+		vspd = MaxSpeed;
+		break;
+	case 3:
+		hspd = -MaxSpeed;
+		vspd = 0;
+		break;
+	case 4:
+		hspd = 0;
+		vspd = -MaxSpeed;
+		break;
+}
+//eventual movement
+if (place_meeting(x + hspd, y, Obj_Wall_V))
+{
+	while (!place_meeting(x + sign(hspd), y, Obj_Wall_V))
+		x += sign(hspd);
+		hspd = 0;
+}
+x += hspd;
+		
+if (place_meeting(x, y + vspd, Obj_Wall_H))
+	{
+	while (!place_meeting(x, y + sign(vspd), Obj_Wall_H))
+		y += sign(vspd);
+		vspd = 0;
+}
+y += vspd;
+move_wrap(true,true,sprite_width/2);

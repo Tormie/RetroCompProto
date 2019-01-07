@@ -1,0 +1,42 @@
+switch (random_direction)
+{
+	case 0:
+		random_direction_h = 1;
+		random_direction_v = 0;
+		break;
+	case 1:
+		random_direction_h = 0;
+		random_direction_v = 1;
+		break;
+	case 2:
+		random_direction_h = -1;
+		random_direction_v = 0;
+		break;
+	case 3:
+		random_direction_h = 0;
+		random_direction_v = -1;
+		break;
+}
+
+hspd = random_direction_h * MaxSpeed;
+vspd = random_direction_v * MaxSpeed;
+
+//check wall collisions
+if (place_meeting(x + hspd, y, Obj_Wall_V))
+{
+	while (!place_meeting(x + sign(hspd), y, Obj_Wall_V))
+	x += sign(hspd);
+	hspd = 0;
+	random_direction = irandom_range(0,3);
+}
+x += hspd;
+		
+if (place_meeting(x, y + vspd, Obj_Wall_H))
+{
+	while (!place_meeting(x, y + sign(vspd), Obj_Wall_H))
+	y += sign(vspd);
+	vspd = 0;
+	random_direction = irandom_range(0,3);
+}
+y += vspd;
+move_wrap(true,true,sprite_width/2);

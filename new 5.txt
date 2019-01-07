@@ -1,0 +1,13 @@
+Space invaders pseudocode
+
+set initial direction
+
+move all invaders right until the rightmost hits a specific x (per 8 px)
+
+have them move down once (8 px)
+
+set direction to the other side until leftmost hits a specific x
+
+repeat
+
+using a counter and a switch statement

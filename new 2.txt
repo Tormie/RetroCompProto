@@ -1,0 +1,23 @@
+	case Rm_01_Pacman1:
+		sprite_index = Spr_PlayerShip_Maze;
+		hspd = (-keyboard_check(vk_left) + keyboard_check(vk_right)) * MaxSpeed;
+		vspd = (-keyboard_check(vk_up) + keyboard_check(vk_down)) * MaxSpeed;
+		
+		if (place_meeting(x + hspd, y, Obj_Wall_V))
+		{
+			while (!place_meeting(x + sign(hspd), y, Obj_Wall_V))
+			x += sign(hspd);
+			hspd = 0;
+		}
+		x += hspd;
+		
+		if (place_meeting(x, y + vspd, Obj_Wall_H))
+		{
+			while (!place_meeting(x, y + sign(vspd), Obj_Wall_H))
+			y += sign(vspd);
+			vspd = 0;
+		}
+		y += vspd;
+		move_wrap(true,true,sprite_width/2);
+		break;
+}

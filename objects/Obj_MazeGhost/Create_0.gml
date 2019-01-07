@@ -1,0 +1,10 @@
+//time_to_change_dir = irandom_range(90,120);
+//ticker = 0;
+random_direction = choose(1,3);
+vulnerable = 0;
+released = 0;
+current_movement = random_direction;
+desired_movement = random_direction;
+startx = x;
+starty = y;
+delaytime = 0;

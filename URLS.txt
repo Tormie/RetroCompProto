@@ -1,0 +1,15 @@
+https://forum.yoyogames.com/index.php?threads/changing-room-persistence-in-gms2.27285/
+
+https://forum.yoyogames.com/index.php?threads/count-instances.42443/
+
+https://forum.yoyogames.com/index.php?threads/pac-man-ghost-code.35976/
+
+https://forum.yoyogames.com/index.php?threads/pacman-ghost-inteligencie.16217/
+
+https://forum.yoyogames.com/index.php?threads/official-pac-man-movement.50292/
+
+https://www.reddit.com/r/gamemaker/comments/8pnvo3/top_down_object_avoidance_for_ai/
+
+https://forum.yoyogames.com/index.php?threads/steering-behaviours-the-ai-system-everyone-needs-for-their-game.23370/
+
+https://forum.yoyogames.com/index.php?threads/pathfinding-and-ai.34397/
