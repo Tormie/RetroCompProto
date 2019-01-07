@@ -71,6 +71,14 @@
             }
         },
         {
+            "Key": "097d3d96-a7f0-4e70-8c3a-f228465da0c5",
+            "Value": {
+                "id": "d0ff2fc6-df22-491e-9663-0e78fa64054a",
+                "resourcePath": "sprites\\Spr_Playership_CollMask\\Spr_Playership_CollMask.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "184a3838-c9c4-46a3-b479-ebff865591ea",
             "Value": {
                 "id": "809b427a-98dc-4077-b883-b447d00285a3",
@@ -355,6 +363,14 @@
             "Value": {
                 "id": "6ae421f9-7e5b-4aa0-9ded-f59e4cabd44a",
                 "resourcePath": "objects\\Obj_Wall_H_Half\\Obj_Wall_H_Half.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "966998a9-83ab-4f81-b94d-40b392d9e2f4",
+            "Value": {
+                "id": "b8a9d07b-c7be-46e1-a735-2140d07e08fc",
+                "resourcePath": "objects\\Obj_Playership_Coll\\Obj_Playership_Coll.yy",
                 "resourceType": "GMObject"
             }
         },

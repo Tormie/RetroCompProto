@@ -61,7 +61,7 @@ switch(room){
 					}
 					break;
 				case 2:
-					if (!place_meeting(x, y + MaxSpeed, Obj_Wall_H) && !place_meeting(x, y + MaxSpeed, Obj_Wall_H_Half))
+					if (!place_meeting(x, y + MaxSpeed, Obj_Wall_H) && !place_meeting(x, y + MaxSpeed, Obj_Wall_H_Half) && !place_meeting(x, y + MaxSpeed, Obj_Wall_V))
 					{
 						current_movement = desired_movement;
 					}
@@ -73,7 +73,7 @@ switch(room){
 					}
 					break;			
 				case 4:
-					if (!place_meeting(x, y - MaxSpeed, Obj_Wall_H)&& !place_meeting(x, y - MaxSpeed, Obj_Wall_H_Half))
+					if (!place_meeting(x, y - MaxSpeed, Obj_Wall_H) && !place_meeting(x, y - MaxSpeed, Obj_Wall_H_Half)&& !place_meeting(x, y - MaxSpeed, Obj_Wall_V))
 					{
 						current_movement = desired_movement;
 					}
