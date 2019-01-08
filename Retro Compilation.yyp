@@ -71,14 +71,6 @@
             }
         },
         {
-            "Key": "097d3d96-a7f0-4e70-8c3a-f228465da0c5",
-            "Value": {
-                "id": "d0ff2fc6-df22-491e-9663-0e78fa64054a",
-                "resourcePath": "sprites\\Spr_Playership_CollMask\\Spr_Playership_CollMask.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "184a3838-c9c4-46a3-b479-ebff865591ea",
             "Value": {
                 "id": "809b427a-98dc-4077-b883-b447d00285a3",
@@ -367,18 +359,18 @@
             }
         },
         {
-            "Key": "966998a9-83ab-4f81-b94d-40b392d9e2f4",
-            "Value": {
-                "id": "b8a9d07b-c7be-46e1-a735-2140d07e08fc",
-                "resourcePath": "objects\\Obj_Playership_Coll\\Obj_Playership_Coll.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "994254d3-832e-4565-92ad-cc0f744f1036",
             "Value": {
                 "id": "68751733-65db-4856-8f5f-351e0a0733bd",
                 "resourcePath": "objects\\Obj_MazeGhost\\Obj_MazeGhost.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
+            "Key": "998aa36a-0db3-4a4c-8a46-8e33db196fac",
+            "Value": {
+                "id": "8219045c-6dac-4a39-acf8-064cf402c913",
+                "resourcePath": "objects\\Obj_MazeGhost_Collider1\\Obj_MazeGhost_Collider1.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -407,6 +399,14 @@
             }
         },
         {
+            "Key": "a10f90c4-64a7-4b4b-aff9-037805e2be5f",
+            "Value": {
+                "id": "630758cb-84b8-464d-bc37-712a4d06d025",
+                "resourcePath": "objects\\Obj_Playership_Maze_Collider\\Obj_Playership_Maze_Collider.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "a43bce36-ca35-489f-9878-5f5a829d3beb",
             "Value": {
                 "id": "f61afa08-df47-425c-9a4e-4b9074bd0d74",
@@ -427,6 +427,14 @@
             "Value": {
                 "id": "f5048995-26e2-41d5-96fd-f356c3adede8",
                 "resourcePath": "sprites\\Spr_PlayerShip_Rocks\\Spr_PlayerShip_Rocks.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "a7c79eac-d396-4cc0-a3fa-0f71a48bf638",
+            "Value": {
+                "id": "866e031e-c3ff-4dbc-839a-8bd99cd6eb51",
+                "resourcePath": "sprites\\Spr_Playership__Maze_Collider\\Spr_Playership__Maze_Collider.yy",
                 "resourceType": "GMSprite"
             }
         },

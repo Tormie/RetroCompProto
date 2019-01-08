@@ -8,3 +8,4 @@ desired_movement = random_direction;
 startx = x;
 starty = y;
 delaytime = 0;
+instance_create_layer(x,y,"Instances",Obj_MazeGhost_Collider1);

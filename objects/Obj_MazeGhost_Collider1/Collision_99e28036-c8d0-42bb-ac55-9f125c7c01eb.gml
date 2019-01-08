@@ -1,4 +1,4 @@
-/*if (vulnerable = 0)
+if (CoupledGhost.vulnerable = 0)
 {
 	lives -= 1;
 	with (Obj_PlayerShip1){
@@ -7,9 +7,11 @@
 		current_movement = 0;
 		desired_movement = 0;
 	}
-	with (Obj_MazeGhost)
+	with (CoupledGhost)
 	{
 		x = startx;
 		y = starty;
 	}
-}*/
+	x = CoupledGhost.startx;
+	y = CoupledGhost.starty;
+}
