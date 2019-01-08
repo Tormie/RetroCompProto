@@ -23,14 +23,18 @@ upfree = 0;
 downfree = 0;
 
 //Check if directions are free.
-if (delaytime <= 0)
+if (delaytime >= 30)
 {
-	if (!place_meeting(x + MaxSpeed, y, Obj_Wall_V)) rightfree = 1;
+	/*if (!place_meeting(x + MaxSpeed, y, Obj_Wall_V)) rightfree = 1;
 	if (!place_meeting(x - MaxSpeed, y, Obj_Wall_V)) leftfree = 1;
 	if (!place_meeting(x, y - MaxSpeed, Obj_Wall_H) && !place_meeting(x, y - MaxSpeed, Obj_Wall_H_Half)) upfree = 1;
-	if (!place_meeting(x, y + MaxSpeed, Obj_Wall_H) && !place_meeting(x, y + MaxSpeed, Obj_Wall_H_Half)) downfree = 1;
+	if (!place_meeting(x, y + MaxSpeed, Obj_Wall_H) && !place_meeting(x, y + MaxSpeed, Obj_Wall_H_Half)) downfree = 1;*/
+	if (place_meeting(x + MaxSpeed, y, Obj_Wall_V)) rightfree = 0; else rightfree = 1;
+	if (place_meeting(x - MaxSpeed, y, Obj_Wall_V)) leftfree = 0; else leftfree = 1;
+	if (place_meeting(x, y - MaxSpeed, Obj_Wall_H) && !place_meeting(x, y - MaxSpeed, Obj_Wall_H_Half)) upfree = 0; else upfree = 1;
+	if (place_meeting(x, y + MaxSpeed, Obj_Wall_H) && !place_meeting(x, y + MaxSpeed, Obj_Wall_H_Half)) downfree = 0; else downfree = 1;
 
-//If one (or more) direction is free and it's not current, choose between current and potential. -- THIS MUST HAPPEN ONCE, not after one another.
+//If one (or more) direction is free and it's not current, choose between current and potential. -- THIS MUST HAPPEN AT ONCE, not after one another.
 
 	switch (current_movement)
 	{
@@ -43,7 +47,7 @@ if (delaytime <= 0)
 		
 		if (!leftfree && upfree && !downfree) desired_movement = choose(1,4);
 		if (!leftfree && !upfree && downfree) desired_movement = choose(1,2);
-		delaytime = 30;
+		delaytime = 0;
 		break;
 	case 2:
 		if (rightfree && leftfree && upfree) desired_movement = choose (1,2,3);
@@ -54,7 +58,7 @@ if (delaytime <= 0)
 		
 		if (rightfree && !leftfree && !upfree) desired_movement = choose (1,2);
 		if (!rightfree && leftfree && !upfree) desired_movement = choose (2,3);
-		delaytime = 30;
+		delaytime = 0;
 		break;
 	case 3:
 		if (rightfree && downfree && upfree) desired_movement = choose (2,3,4);
@@ -65,7 +69,7 @@ if (delaytime <= 0)
 		
 		if (!rightfree && downfree && !upfree) desired_movement = choose (2,3);
 		if (!rightfree && !downfree && upfree) desired_movement = choose (3,4);
-		delaytime = 30;
+		delaytime = 0;
 		break;
 	case 4:
 		if (rightfree && downfree && leftfree) desired_movement = choose (1,3,4);
@@ -76,7 +80,7 @@ if (delaytime <= 0)
 		
 		if (rightfree && !downfree && !leftfree) desired_movement = choose (1,4);
 		if (!rightfree && !downfree && leftfree) desired_movement = choose (3,4);
-		delaytime = 30;
+		delaytime = 0;
 		break;		
 	}
 }
@@ -159,4 +163,4 @@ if (place_meeting(x, y + vspd, Obj_Wall_H) && vspd != 0)
 	}
 y += vspd;
 move_wrap(true,true,sprite_width/2);
-delaytime--;
+delaytime++;
