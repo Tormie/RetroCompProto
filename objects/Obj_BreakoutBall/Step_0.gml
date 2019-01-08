@@ -30,6 +30,19 @@ vspd = lengthdir_y(speed, direction);
 //Horizontal bounce
 if(place_meeting(x + hspd, y, Obj_Wall_V_Breakout_Coll))
     direction = -direction + 180;
+	
+//Horizontal bounce
+if(place_meeting(x + hspd, y, Obj_Breakout_Block1))
+{
+	direction = -direction;
+	inst = instance_nearest(x,y,Obj_Breakout_Block1);
+	with (inst)
+	{
+		alarm[0] = 1;
+	}
+	
+}
+	
 
 //Vertical bounce
 if(place_meeting(x, y + vspd, Obj_Wall_H_Breakout_Coll))

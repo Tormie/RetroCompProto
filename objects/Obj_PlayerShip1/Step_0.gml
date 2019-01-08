@@ -106,7 +106,7 @@ switch(room){
 				break;
 		}
 		//eventual movement
-		if (place_meeting(x + hspd, y, Obj_Wall_V))
+		if (place_meeting(x + sign(hspd), y, Obj_Wall_V))
 		{
 			while (!place_meeting(x + sign(hspd), y, Obj_Wall_V))
 				x += sign(hspd);
@@ -114,7 +114,7 @@ switch(room){
 		}
 		x += hspd;
 				
-		if (place_meeting(x, y + vspd, Obj_Wall_H))
+		if (place_meeting(x, y + sign(vspd), Obj_Wall_H))
 			{
 			while (!place_meeting(x, y + sign(vspd), Obj_Wall_H))
 				y += sign(vspd);
