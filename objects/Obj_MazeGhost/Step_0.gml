@@ -23,7 +23,7 @@ upfree = 0;
 downfree = 0;
 
 //Check if directions are free.
-if (delaytime >= 30)
+if (delaytime >= 15)
 {
 	/*if (!place_meeting(x + MaxSpeed, y, Obj_Wall_V)) rightfree = 1;
 	if (!place_meeting(x - MaxSpeed, y, Obj_Wall_V)) leftfree = 1;

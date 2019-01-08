@@ -1,5 +1,3 @@
-/// @description Insert description here
-// You can write your code in this editor
 current_movement = 0;
 desired_movement = 0;
 

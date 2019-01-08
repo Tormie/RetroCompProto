@@ -142,7 +142,7 @@ switch (room){
 				visible = 1;
 			}
 		}
-		inv_movetime = 1 + (29 / (18 / global.inv_enemycounter))/global.difficulty_inv;
+		inv_movetime = 1 + (29 / (18 / global.inv_enemycounter)/global.difficulty_inv);
 		if (inv_ticker >= inv_movetime)
 		{
 			switch (global.invdirection)

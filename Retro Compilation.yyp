@@ -207,22 +207,6 @@
             }
         },
         {
-            "Key": "5b9c5500-1581-4606-b281-94465635cbd0",
-            "Value": {
-                "id": "2f1fe579-0af9-4f91-91ee-13d632a59ec6",
-                "resourcePath": "sprites\\Spr_Breakout_Block_Solid\\Spr_Breakout_Block_Solid.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "5d772e53-645a-40f2-a9e6-78140c180754",
-            "Value": {
-                "id": "a96ec6e6-4038-4552-951c-c7c390c6a74a",
-                "resourcePath": "objects\\Obj_Breakout_Block1_Solid\\Obj_Breakout_Block1_Solid.yy",
-                "resourceType": "GMObject"
-            }
-        },
-        {
             "Key": "5dfa9785-354b-46ed-8440-7365133f10e0",
             "Value": {
                 "id": "e0c77eec-8e96-4307-b935-3b298eafab0f",
